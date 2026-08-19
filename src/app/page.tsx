@@ -1,24 +1,8 @@
 import SiteFooter from "@/components/layout/footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import ProductCard from "@/components/shop/product-card";
-
-const featuredProducts = [
-  {
-    name: "Yirgacheffe Bloom",
-    note: "Floral · Orange zest · Honey",
-    price: "£18",
-  },
-  {
-    name: "House Espresso",
-    note: "Cocoa · Fig · Toasted almond",
-    price: "£17",
-  },
-  {
-    name: "Brew Kit",
-    note: "V60 set · Ceramic dripper · Filters",
-    price: "£42",
-  },
-];
+import products from "@/data/products";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -73,9 +57,7 @@ export default function Home() {
                   <p className="mt-2 text-2xl font-medium text-foreground">£18</p>
                 </div>
 
-                <button className="rounded-md bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground">
-                  Add to cart
-                </button>
+                <Button type="button">Add to cart</Button>
               </div>
             </div>
           </div>
@@ -89,9 +71,17 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.name} name={product.name} note={product.note} price={product.price} />
-            ))}
+            {products
+              .filter((product) => product.featured)
+              .map((product) => (
+                <ProductCard
+                  key={product.name}
+                  name={product.name}
+                  note={product.note}
+                  price={product.price}
+                  slug={product.slug}
+                />
+              ))}
           </div>
         </section>
 

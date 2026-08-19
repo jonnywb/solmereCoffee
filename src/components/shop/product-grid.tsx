@@ -31,7 +31,7 @@ export function FilterToggles({ setSelectedCategory }: { setSelectedCategory: (c
 export function ProductGrid({
   products,
 }: {
-  products: Array<{ name: string; note: string; price: string; category: string }>;
+  products: Array<{ name: string; note: string; price: string; category: string; slug: string }>;
 }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -41,7 +41,13 @@ export function ProductGrid({
       {products
         .filter((product) => selectedCategory === "all" || product.category === selectedCategory)
         .map((product) => (
-          <ProductCard key={product.name} name={product.name} note={product.note} price={product.price} />
+          <ProductCard
+            key={product.slug}
+            name={product.name}
+            note={product.note}
+            price={product.price}
+            slug={product.slug}
+          />
         ))}
     </div>
   );
