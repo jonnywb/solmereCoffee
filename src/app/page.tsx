@@ -67,7 +67,7 @@ export default function Home() {
         <section className="mt-20">
           <div className="mb-8">
             <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">Favourites</p>
-            <h2 className="mt-2 font-serif text-4xl">This season's essentials.</h2>
+            <h2 className="mt-2 font-serif text-4xl">This season&apos;s essentials.</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">

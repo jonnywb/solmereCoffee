@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-border/70">
@@ -8,15 +10,15 @@ export function SiteFooter() {
         </div>
 
         <div className="flex gap-6">
-          <a href="/shop" className="transition-colors hover:text-primary">
+          <Link href="/shop" className="transition-colors hover:text-primary">
             Shop
-          </a>
-          <a href="/journal" className="transition-colors hover:text-primary">
+          </Link>
+          <Link href="/journal" className="transition-colors hover:text-primary">
             Journal
-          </a>
-          <a href="/account" className="transition-colors hover:text-primary">
+          </Link>
+          <Link href="/account" className="transition-colors hover:text-primary">
             Account
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
