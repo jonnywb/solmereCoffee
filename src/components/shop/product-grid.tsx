@@ -2,6 +2,7 @@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import ProductCard from "./product-card";
 import { useState } from "react";
+import type { Product } from "@/types/product";
 
 export function FilterToggles({ setSelectedCategory }: { setSelectedCategory: (category: string) => void }) {
   return (
@@ -28,11 +29,7 @@ export function FilterToggles({ setSelectedCategory }: { setSelectedCategory: (c
   );
 }
 
-export function ProductGrid({
-  products,
-}: {
-  products: Array<{ name: string; note: string; price: number; category: string; slug: string }>;
-}) {
+export function ProductGrid({ products }: { products: Product[] }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   return (

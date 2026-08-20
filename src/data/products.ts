@@ -1,4 +1,6 @@
-const products = [
+import type { Product } from "@/types/product";
+
+const products: Product[] = [
   {
     name: "Yirgacheffe Bloom",
     note: "Floral · Orange zest · Honey",
