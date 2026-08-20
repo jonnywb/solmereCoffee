@@ -2,7 +2,7 @@
 
 import { useCart } from "@/components/cart/cart-content";
 import { SiteHeader } from "@/components/layout/site-header";
-import SiteFooter from "@/components/layout/footer";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 import Link from "next/link";
 import { Input } from "@/components/ui/input";

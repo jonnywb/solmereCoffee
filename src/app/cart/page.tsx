@@ -1,7 +1,7 @@
 "use client";
 
 import { SiteHeader } from "@/components/layout/site-header";
-import SiteFooter from "@/components/layout/footer";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { useCart } from "@/components/cart/cart-content";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";

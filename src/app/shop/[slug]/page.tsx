@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/layout/site-header";
-import SiteFooter from "@/components/layout/footer";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { ProductActions } from "@/components/shop/product-actions";
 
 import Link from "next/link";
