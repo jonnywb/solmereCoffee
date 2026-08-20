@@ -50,7 +50,7 @@ export default async function Product({ params }: { params: Promise<{ slug: stri
               </div>
               <div className="mt-10 flex items-center justify-between gap-4 border-t border-border pt-6">
                 <ProductActions slug={product.slug} name={product.name} price={product.price} />
-                <span className="font-serif text-2xl">{product.price}</span>
+                <span className="font-serif text-2xl">£{product.price}</span>
               </div>
             </div>
           </article>

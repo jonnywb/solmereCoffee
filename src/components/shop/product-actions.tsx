@@ -3,14 +3,16 @@
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/components/cart/cart-content";
 
 interface ProductActionsProps {
   slug: string;
   name: string;
-  price: string;
+  price: number;
 }
 export function ProductActions({ slug, name, price }: ProductActionsProps) {
   const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCart();
 
   return (
     <div className="flex items-center gap-3">
@@ -43,7 +45,19 @@ export function ProductActions({ slug, name, price }: ProductActionsProps) {
         </Button>
       </div>
 
-      <Button type="button">Add to cart</Button>
+      <Button
+        type="button"
+        onClick={() =>
+          addItem({
+            slug,
+            name,
+            price,
+            quantity,
+          })
+        }
+      >
+        Add to cart
+      </Button>
     </div>
   );
 }

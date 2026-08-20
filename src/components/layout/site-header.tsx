@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CartLink } from "../cart/cart-link";
 
 const navigation = [
   { label: "Shop", href: "/shop" },
@@ -32,12 +33,7 @@ export function SiteHeader() {
           >
             Account
           </Link>
-          <Link
-            href="/cart"
-            className="font-mono text-xs uppercase tracking-wide text-foreground transition-colors hover:text-primary"
-          >
-            Cart (0)
-          </Link>
+          <CartLink />
         </div>
       </div>
     </header>

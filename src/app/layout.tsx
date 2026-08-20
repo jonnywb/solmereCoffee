@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Mono, Instrument_Serif, Manrope } from "next/font/google";
+import { CartProvider } from "@/components/cart/cart-content";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -27,7 +28,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} antialiased`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <CartProvider>{children}</CartProvider>
+      </body>
     </html>
   );
 }

@@ -31,7 +31,7 @@ export function FilterToggles({ setSelectedCategory }: { setSelectedCategory: (c
 export function ProductGrid({
   products,
 }: {
-  products: Array<{ name: string; note: string; price: string; category: string; slug: string }>;
+  products: Array<{ name: string; note: string; price: number; category: string; slug: string }>;
 }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 

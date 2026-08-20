@@ -3,7 +3,7 @@ import Link from "next/link";
 interface ProductCardProps {
   name: string;
   note: string;
-  price: string;
+  price: number;
   slug: string;
 }
 
@@ -20,7 +20,7 @@ export default function ProductCard({ name, note, price, slug }: ProductCardProp
             <h3 className="font-serif text-2xl">{name}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{note}</p>
           </div>
-          <span className="font-medium">{price}</span>
+          <span className="font-medium">£{price}</span>
         </div>
       </article>
     </Link>
